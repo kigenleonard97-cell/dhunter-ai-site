@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DHunter AI | Trading Intelligence</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#07111f;color:#e8f0ff;
+ font-family:Arial,sans-serif;
+}
+header{
+ padding:22px 18px;background:#0d1b2d;
+ border-bottom:1px solid #20344d;
+ display:flex;justify-content:space-between;
+ align-items:center;flex-wrap:wrap;gap:12px;
+}
+.logo{font-size:23px;font-weight:bold;color:#36d6ad}
+.logo span{color:white}
+.status{font-size:12px;color:#f5c66a}
+main{max-width:1050px;margin:auto;padding:22px 16px}
+h1{font-size:29px;margin-bottom:8px}
+.sub{color:#9aacc4;line-height:1.6}
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:15px;margin-top:25px
+}
+.card{
+ background:#102139;border:1px solid #263e5b;
+ border-radius:13px;padding:19px;
+}
+.card h3{margin:0 0 12px;color:#9aacc4;font-size:14px}
+.value{font-size:23px;font-weight:bold}
+.green{color:#36d6ad}
+.gold{color:#f5c66a}
+button{
+ background:#16b994;color:#061b20;border:0;
+ padding:13px 18px;border-radius:8px;
+ font-weight:bold;font-size:14px;cursor:pointer;
+}
+button:disabled{opacity:.5;cursor:not-allowed}
+select{
+ background:#0b192a;color:white;padding:12px;
+ border:1px solid #34506c;border-radius:8px;
+ width:100%;margin:9px 0 17px;
+}
+.panel{margin-top:22px}
+.notice{
+ background:#2b281b;color:#f5d98c;
+ padding:13px;border-radius:8px;
+ font-size:13px;line-height:1.5;
+}
+footer{
+ text-align:center;padding:25px;color:#8294aa;
+ font-size:12px;border-top:1px solid #20344d;
+ margin-top:35px
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">DHUNTER <span>AI</span></div>
+ <div class="status">● INTELLIGENCE PLATFORM</div>
+</header>
+
+<main>
+ <h1>Advanced Trading Intelligence</h1>
+ <p class="sub">
+ Welcome to DHunter AI. Your intelligent trading
+ analysis and market monitoring platform.
+ </p>
+
+ <div class="grid">
+  <div class="card">
+   <h3>PLATFORM ENGINE</h3>
+   <div class="value green">ENGINE V2</div>
+   <p class="sub">Advanced analysis architecture</p>
+  </div>
+  <div class="card">
+   <h3>MARKET CONNECTION</h3>
+   <div class="value gold" id="connection">Not connected</div>
+   <p class="sub">Live connection pending</p>
+  </div>
+  <div class="card">
+   <h3>TRADING MODE</h3>
+   <div class="value">Both</div>
+   <p class="sub">Analysis and execution architecture</p>
+  </div>
+ </div>
+
+ <section class="card panel">
+  <h2>Market Analysis Centre</h2>
+  <p class="sub">Select a market for future live analysis integration.</p>
+
+  <label for="market">Select market</label>
+  <select id="market">
+   <option>Volatility 10 Index</option>
+   <option>Volatility 25 Index</option>
+   <option>Volatility 50 Index</option>
+   <option>Volatility 75 Index</option>
+   <option>Volatility 100 Index</option>
+   <option>Volatility 10 (1s) Index</option>
+   <option>Volatility 25 (1s) Index</option>
+   <option>Volatility 50 (1s) Index</option>
+   <option>Volatility 75 (1s) Index</option>
+   <option>Volatility 100 (1s) Index</option>
+  </select>
+
+  <button onclick="analyse()">Prepare Analysis</button>
+  <p id="result" class="sub">
+   Select a market to prepare your analysis.
+  </p>
+ </section>
+
+ <section class="card panel">
+  <h2>DHunter AI Engine</h2>
+  <p class="sub">
+   Designed for intelligent market monitoring,
+   signal analysis, risk management and automated
+   trading integration.
+  </p>
+  <div class="notice">
+   DEMO MODE: Live market data, AI signals and
+   trading execution are not yet connected.
+   No real trades are being placed.
+  </div>
+ </section>
+
+ <section class="grid">
+  <div class="card">
+   <h3>AI MARKET ANALYSIS</h3>
+   <p>Technical analysis and market intelligence.</p>
+  </div>
+  <div class="card">
+   <h3>RISK MANAGEMENT</h3>
+   <p>Planned trade protection and exposure controls.</p>
+  </div>
+  <div class="card">
+   <h3>DERIV INTEGRATION</h3>
+   <p>Secure API connectivity planned.</p>
+  </div>
+ </section>
+</main>
+
+<footer>
+ DHunter AI © 2026 | Intelligent Trading Technology
+</footer>
+
+<script>
+function analyse(){
+ const market=document.getElementById("market").value;
+ document.getElementById("result").textContent=
+ "Selected market: "+market+
+ ". Analysis engine awaiting live data integration.";
+}
+</script>
+</body>
+</html>
